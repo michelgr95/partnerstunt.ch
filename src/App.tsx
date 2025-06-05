@@ -40,8 +40,8 @@ function App() {
           <h3 className="text-2xl font-bold text-blue-600">🎉 Events & Sessions</h3>
           <ul className="list-disc list-inside">
             <li>Offene Trainings</li>
-            <li>Stunt-Treffs</li>
-            <li>PS Jams in deiner Region</li>
+            <li>Stunt-Sessions</li>
+            <li>PS in deiner Region</li>
           </ul>
         </section>
 
@@ -50,10 +50,20 @@ function App() {
           <p>Von Beginner bis Elite – hier findest du Workshops mit Top-Coaches aus der Schweiz & international.</p>
         </section>
 
+        <section className="mt-12 text-center">
+          <h2 className="text-2xl font-semibold text-blue-600">Kontakt</h2>
+          <p className="mt-2 text-gray-700">
+            Bei Fragen oder Interesse an Partnerstunt-Events, melde dich gerne bei uns:
+          </p>
+          <p className="mt-4 font-mono text-blue-500">
+            <a href="mailto:swisspartnerstunt@gmail.com">swisspartnerstunt@gmail.com</a>
+          </p>
+        </section>
+
         <section id="about" className="space-y-4">
           <h3 className="text-2xl font-bold text-blue-600">🤝 Über den Verein</h3>
           <p>
-            partnerstunt.ch ist ein unabhängiger Verein, der die PS-Community verbindet. 
+            Partnerstunt Schweiz ist ein unabhängiger Verein, der die PS-Community verbindet. 
             Wir organisieren Trainings, bieten Plattformen zur Vernetzung und fördern das Wachstum des Partnerstunts in der Schweiz.
           </p>
         </section>
