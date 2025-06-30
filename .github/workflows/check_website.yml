@@ -1,0 +1,24 @@
+name: Check Website Status
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # Every 10 minutes
+  workflow_dispatch:        # Allow manual triggering
+
+jobs:
+  check-site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if website is up
+        id: check_site
+        run: |
+          STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" https://partnerstunt.ch)
+          echo "Status Code: $STATUS_CODE"
+          if [ "$STATUS_CODE" -ne 200 ]; then
+            echo "Site is down"
+            echo "site_down=true" >> $GITHUB_OUTPUT
+          else
+            echo "Site is up"
+            echo "site_down=false" >> $GITHUB_OUTPUT
+          fi
